@@ -8,5 +8,6 @@ post: ## Create a new blog post whose filename and title come from the environme
 	hugo new posts/$(POST_NAME).md
 	sed -i '/title:/c\title: "$(POST_TITLE)"' content/posts/$(POST_NAME).md
 
-help: ## prints out the list of targets and their usage
-@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
+## Show this help.
+help:
+     @awk '/^#/{c=substr($$0,3);next}c&&/^[[:alpha:]][[:alnum:]_-]+:/{print substr($$1,1,index($$1,":")),c}1{c=0}' $(MAKEFILE_LIST) | column -s: -t
