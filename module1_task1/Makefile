@@ -1,5 +1,5 @@
 clean: 
-		cd $(dist) && rm rf *
+		rm -r ./dist/
 
 build: 
 		hugo > /dev/null 2>&1
