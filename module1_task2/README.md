@@ -8,3 +8,7 @@
 - create makefile
 
 ## Lifecycle
+- clean
+- build
+- post 
+- help
