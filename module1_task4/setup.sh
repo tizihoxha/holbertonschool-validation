@@ -1,3 +1,5 @@
 #!/bin/bash
 apt-get update && apt-get install -y hugo make
-make build
+sudo snap install hugo
+sudo apt update
+sudo apt install make
