@@ -12,12 +12,13 @@
 - build
 - post 
 - help
+- unit-test
+- package
+- validate
+- integration-test
 
 ## Workflow
 - Unnitest
 
 ## Buid Workflow
 - package
-
-## unit-tests
-- testing

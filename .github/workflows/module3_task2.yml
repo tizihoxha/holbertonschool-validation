@@ -29,6 +29,9 @@ jobs:
       - name: help
         run: sudo make help -C module3_task2
 
+      - name: validate
+        run: sudo make validate -C module3_task2
+
       - name: Build command
         run: sudo make build -C module3_task2
 
