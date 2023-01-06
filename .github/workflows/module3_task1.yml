@@ -22,7 +22,7 @@ jobs:
         run: sudo make unittest -C module3_task1
 
       - name: test2
-        run: sudo make integration-tests -C module3_task1
+        run: sudo make integration-test -C module3_task1
 
       - name: help
         run: sudo make help -C module3_task1
