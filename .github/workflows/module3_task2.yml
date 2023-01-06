@@ -29,6 +29,9 @@ jobs:
       - name: help
         run: sudo make help -C module3_task2
 
+      - name: markdownlint
+        run: sudo make markdownlint -C module3_task2
+
       - name: validate
         run: sudo make validate -C module3_task2
 
