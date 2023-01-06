@@ -12,10 +12,10 @@
 - build
 - post 
 - help
-- unit-test
+- unit-tests
 - package
 - validate
-- integration-test
+- integration-tests
 
 ## Workflow
 - Unnitest

@@ -14,10 +14,10 @@ help:     ## Show this help usage
 lint: ## lint
 	markdownlint README.md DEPLOY.md
 
-unittest: ## testing
+unit-tests: ## testing
 	pwd
 
-integration-test: ## tests
+integration-tests: ## tests
 	ls
 
 validate: ## validaion
