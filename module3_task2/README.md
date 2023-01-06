@@ -11,7 +11,7 @@
 
 - clean
 - build
-- post 
+- post
 - help
 - unit-tests
 - package
