@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: running make help
-        run: make help
+        run: make help -C module3_task0
