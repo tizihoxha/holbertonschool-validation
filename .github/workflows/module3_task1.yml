@@ -10,7 +10,7 @@ jobs:
       - name: Cloning repository
         uses: actions/checkout@v3
         
-      -name: creating lint
+      - name: creating lint
        run: make lint -C module3_task1
         
       - name: Insalling packages
