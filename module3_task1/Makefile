@@ -10,3 +10,6 @@ post: ## Create a new blog post whose filename and title come from the environme
 
 help:     ## Show this help usage
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
+
+lint:  ## make lint used
+    shellcheck setup.sh
