@@ -1,0 +1,21 @@
+name: module3_task1
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Cloning repository
+        uses: actions/checkout@v3
+        
+      - name: creating lint
+        run: make lint -C module3_task1
+        
+      - name: Insalling packages
+        run: |
+          cd module3_task0
+          sudo ./setup.sh
+      - name: running make help
+        run: make build -C module3_task1
