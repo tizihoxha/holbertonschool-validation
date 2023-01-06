@@ -1,0 +1,54 @@
+---
+name: module3_task3
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches:
+      - "main"
+    tags:
+      - "v1.0.0"
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Install required tools
+        run: cd module3_task3 && sudo ./setup.sh
+
+      - name: install markdownlint
+        run: npm install markdownlint-cli
+
+      - name: markdownlint
+        run: sudo make lint -C module3_task3
+
+      - name: Unit test
+        run: sudo make unit-tests -C module3_task3
+
+      - name: test2
+        run: sudo make integration-tests -C module3_task3
+
+      - name: validate
+        run: sudo make validate -C module3_task3
+
+      - name: help
+        run: sudo make help -C module3_task3
+
+      - name: Build command
+        run: sudo make build -C module3_task3
+
+      - name: package
+        run: sudo make package -C module3_task3
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            module3_task3/DEPLOY.md
+            module3_task3/awesome-website.zip
+...
