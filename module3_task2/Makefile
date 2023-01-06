@@ -21,4 +21,4 @@ integration-test: ## tests
 	ls
 
 package: ## creating package
-	zip awesome-website.zip awesome-api dist/
+	zip awesome-website.zip dist/
