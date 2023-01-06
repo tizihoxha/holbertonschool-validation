@@ -19,7 +19,7 @@ jobs:
         run: cd module3_task1 && sudo ./setup.sh
 
       - name: test
-        run: sudo make unit-test -C module3_task1
+        run: sudo make unittest -C module3_task1
 
       - name: test2
         run: sudo make integration-tests -C module3_task1
