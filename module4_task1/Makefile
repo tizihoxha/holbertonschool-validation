@@ -11,8 +11,8 @@ post: ## Create a new blog post whose filename and title come from the environme
 help:     ## Show this help usage
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
-lint: ## lint
-	markdownlint README.md DEPLOY.md
+lint: ## markdownlint
+	ls
 
 build-docker: ## builds docker
 	docker build -t awesome:build ./build
