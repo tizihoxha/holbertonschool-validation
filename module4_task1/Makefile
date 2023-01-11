@@ -15,7 +15,7 @@ lint: ## lint
 	markdownlint README.md DEPLOY.md
 
 build-docker: ## builds docker
-	docker build -t awesome:build .
+	docker build -t awesome:build ./build
 
 unit-tests: ## testing
 	pwd
