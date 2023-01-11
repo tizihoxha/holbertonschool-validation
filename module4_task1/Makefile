@@ -15,7 +15,7 @@ lint: ## lint
 	markdownlint README.md DEPLOY.md
 
 build-docker: ## builds docker
-	docker build --tag ${Dockerfile}/${awesome:build}
+	docker build -t awesome:build .
 
 unit-tests: ## testing
 	pwd
