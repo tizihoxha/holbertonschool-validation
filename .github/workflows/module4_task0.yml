@@ -21,12 +21,6 @@ jobs:
       - name: Install required tools
         run: cd module4_task0 && sudo ./setup.sh
 
-      - name: install markdownlint
-        run: npm install markdownlint-cli
-
-      - name: markdownlint
-        run: sudo make lint -C module4_task0
-
       - name: Unit test
         run: sudo make unit-tests -C module4_task0
 

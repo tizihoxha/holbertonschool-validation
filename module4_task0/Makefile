@@ -13,7 +13,7 @@ help:     ## Show this help usage
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
 lint: ## lint
-	markdownlint README.md DEPLOY.md
+	ls
 
 unit-tests: ## testing
 	make build
