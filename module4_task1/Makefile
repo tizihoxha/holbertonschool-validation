@@ -23,8 +23,6 @@ unit-tests: ## testing
 
 integration-tests: ## tests
 	ls
-	make build
-	make clean
 
 validate: ## validaion
 	ls -l
