@@ -39,9 +39,6 @@ jobs:
       - name: Build docker
         run: sudo make build docker -C module4_task1
 
-      - name: package
-        run: sudo make package -C module4_task1
-
       - name: Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
